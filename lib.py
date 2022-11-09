@@ -70,7 +70,7 @@ class VisTrack:
             color = self._color(id_)
             draw.rectangle((*bbox.astype(np.int64),), outline=color)
 
-            text = f'{id_}: {int(100 * score)}%'
+            text = f'{id_}'
             text_w, text_h = draw.textsize(text)
             draw.rectangle((bbox[0], bbox[1], bbox[0] + text_w, bbox[1] + text_h), fill=color, outline=color)
             draw.text((bbox[0], bbox[1]), text, fill=(0, 0, 0))
